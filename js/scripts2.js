@@ -34,7 +34,7 @@ function resetFields() {
 $(document).ready(function() {
 
   $("#add-address").click(function() {
-    $("#new-addresses").append('<div class="new-address">' +
+    $("#appended-addresses").append('<div class="new-address">' +
                                  '<div class="form-group">' +
                                    '<label for="new-street">Street</label>' +
                                    '<input type="text" class="form-control new-street">' +
@@ -49,7 +49,10 @@ $(document).ready(function() {
                                  '</div>' +
                                '</div>');
   });
+  $("#remove-address").click(function(){
+        $("#appended-addresses").empty()
 
+  })
   $("form#new-contact").submit(function(event) {
     event.preventDefault();
 
